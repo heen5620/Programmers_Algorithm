@@ -1,9 +1,11 @@
 class Solution {
     public int solution(int n, int t) {
         int answer = 0;
-          
-        answer = (int)Math.pow(2,t)*n;
         
-        return answer;
+        for(int i=1;i<=t;i++){
+            n = 2*n; 
+        }
+        
+        return n;
     }
 }
