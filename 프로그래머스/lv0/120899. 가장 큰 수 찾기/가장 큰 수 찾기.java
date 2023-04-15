@@ -1,23 +1,18 @@
-import java.util.Arrays;
 class Solution {
     public int[] solution(int[] array) {
         int[] answer = new int[2];
-        int max_num = 0;
+        int max = 0;
         int index = 0;
         
         for(int i=0;i<array.length;i++){
-            if(max_num < array[i]){
-                max_num = array[i];
+            if(array[i] > max){
+                max = array[i];
             }
-        }
-        for(int i=0;i<array.length;i++){
-            if(array[i] == max_num){
+            if(array[i] == max){
                 index = i;
             }
         }
-        
-        
-        answer[0] = max_num;
+        answer[0] = max;
         answer[1] = index;
         return answer;
     }
