@@ -18,7 +18,8 @@ public class Main {
     public static String isBalanced(String line) {
         Stack<Character> stack = new Stack<>();
 
-        for (char c : line.toCharArray()) {
+        for (int i=0;i<line.length();i++) {
+            char c = line.charAt(i);
             if (c == '(' || c == '[') {
                 stack.push(c);
             } else if (c == ')' || c == ']') {
